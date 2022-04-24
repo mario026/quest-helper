@@ -100,6 +100,7 @@ public enum QuestVarbits
 	QUEST_GETTING_AHEAD(693),
 	QUEST_A_KINGDOM_DIVIDED(12296),
 	QUEST_A_NIGHT_AT_THE_THEATRE(12276),
+	QUEST_LAND_OF_THE_GOBLINS(13601), /** find correct bit*/
 
 	/**
 	 * mini-quest varbits, these don't hold the completion value.

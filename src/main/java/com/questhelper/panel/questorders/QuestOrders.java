@@ -668,6 +668,7 @@ public class QuestOrders
 		QuestHelperQuest.GETTING_AHEAD,
 		QuestHelperQuest.BELOW_ICE_MOUNTAIN,
 		QuestHelperQuest.A_NIGHT_AT_THE_THEATRE,
+		QuestHelperQuest.LAND_OF_THE_GOBLINS,
 		QuestHelperQuest.A_KINGDOM_DIVIDED,
 		// Miniquests
 		QuestHelperQuest.ALFRED_GRIMHANDS_BARCRAWL,

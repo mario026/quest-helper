@@ -54,18 +54,21 @@ public enum QuestHelperQuest
 	PRINCE_ALI_RESCUE(311, "Prince Ali Rescue", QuestVarPlayer.QUEST_PRINCE_ALI_RESCUE, Quest.Type.F2P, Quest.Difficulty.INTERMEDIATE),
 	THE_RESTLESS_GHOST(312, "The Restless Ghost", QuestVarPlayer.QUEST_THE_RESTLESS_GHOST, Quest.Type.F2P, Quest.Difficulty.NOVICE),
 	ROMEO__JULIET(313, "Romeo & Juliet", QuestVarPlayer.QUEST_ROMEO_AND_JULIET, Quest.Type.F2P, Quest.Difficulty.NOVICE),
+
 	RUNE_MYSTERIES(314, "Rune Mysteries", QuestVarPlayer.QUEST_RUNE_MYSTERIES, Quest.Type.F2P, Quest.Difficulty.NOVICE),
 	SHEEP_SHEARER(315, "Sheep Shearer", QuestVarPlayer.QUEST_SHEEP_SHEARER, Quest.Type.F2P, Quest.Difficulty.NOVICE),
 	SHIELD_OF_ARRAV_PHOENIX_GANG(316, "Shield of Arrav - Phoenix Gang", QuestVarPlayer.QUEST_SHIELD_OF_ARRAV, Quest.Type.F2P, Quest.Difficulty.NOVICE),
 	SHIELD_OF_ARRAV_BLACK_ARM_GANG(316, "Shield of Arrav - Black Arm Gang", QuestVarPlayer.QUEST_SHIELD_OF_ARRAV_STATE_146, Quest.Type.F2P, Quest.Difficulty.NOVICE),
 	VAMPYRE_SLAYER(1278, "Vampyre Slayer", QuestVarPlayer.QUEST_VAMPYRE_SLAYER, Quest.Type.F2P, Quest.Difficulty.NOVICE),
 	WITCHS_POTION(318, "Witch's Potion", QuestVarPlayer.QUEST_WITCHS_POTION, Quest.Type.F2P, Quest.Difficulty.NOVICE),
+
 	X_MARKS_THE_SPOT(3155, "X Marks the Spot", QuestVarbits.QUEST_X_MARKS_THE_SPOT, Quest.Type.F2P, Quest.Difficulty.NOVICE),
 
 	//Members' Quests
 	ANIMAL_MAGNETISM(331, "Animal Magnetism", QuestVarbits.QUEST_ANIMAL_MAGNETISM, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	ANOTHER_SLICE_OF_HAM(332, "Another Slice of H.A.M.", QuestVarbits.QUEST_ANOTHER_SLICE_OF_HAM, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	BETWEEN_A_ROCK(333, "Between a Rock...", QuestVarbits.QUEST_BETWEEN_A_ROCK, Quest.Type.P2P, Quest.Difficulty.EXPERIENCED),
+
 	BIG_CHOMPY_BIRD_HUNTING(334, "Big Chompy Bird Hunting", QuestVarPlayer.QUEST_BIG_CHOMPY_BIRD_HUNTING, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	BIOHAZARD(335, "Biohazard", QuestVarPlayer.QUEST_BIOHAZARD, Quest.Type.P2P, Quest.Difficulty.NOVICE),
 	CABIN_FEVER(336, "Cabin Fever", QuestVarPlayer.QUEST_CABIN_FEVER, Quest.Type.P2P, Quest.Difficulty.EXPERIENCED),
@@ -77,6 +80,7 @@ public enum QuestHelperQuest
 	DEATH_PLATEAU(342, "Death Plateau", QuestVarPlayer.QUEST_DEATH_PLATEAU, Quest.Type.P2P, Quest.Difficulty.NOVICE),
 	DEATH_TO_THE_DORGESHUUN(343, "Death to the Dorgeshuun", QuestVarbits.QUEST_DEATH_TO_THE_DORGESHUUN, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	THE_DEPTHS_OF_DESPAIR(344, "The Depths of Despair", QuestVarbits.QUEST_THE_DEPTHS_OF_DESPAIR, Quest.Type.P2P, Quest.Difficulty.NOVICE),
+
 	DESERT_TREASURE(345, "Desert Treasure", QuestVarbits.QUEST_DESERT_TREASURE, Quest.Type.P2P, Quest.Difficulty.MASTER),
 	DEVIOUS_MINDS(346, "Devious Minds", QuestVarbits.QUEST_DEVIOUS_MINDS, Quest.Type.P2P, Quest.Difficulty.EXPERIENCED),
 	THE_DIG_SITE(347, "The Dig Site", QuestVarPlayer.QUEST_THE_DIG_SITE, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
@@ -100,6 +104,7 @@ public enum QuestHelperQuest
 	FORGETTABLE_TALE(365, "Forgettable Tale...", QuestVarbits.QUEST_FORGETTABLE_TALE, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	BONE_VOYAGE(3135, "Bone Voyage", QuestVarbits.QUEST_BONE_VOYAGE, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	THE_FREMENNIK_ISLES(367, "The Fremennik Isles", QuestVarbits.QUEST_THE_FREMENNIK_ISLES, Quest.Type.P2P, Quest.Difficulty.EXPERIENCED),
+
 	THE_FREMENNIK_TRIALS(368, "The Fremennik Trials", QuestVarPlayer.QUEST_THE_FREMENNIK_TRIALS, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	GARDEN_OF_TRANQUILLITY(369, "Garden of Tranquillity", QuestVarbits.QUEST_GARDEN_OF_TRANQUILLITY, Quest.Type.P2P, Quest.Difficulty.INTERMEDIATE),
 	GERTRUDES_CAT(370, "Gertrude's Cat", QuestVarPlayer.QUEST_GERTRUDES_CAT, Quest.Type.P2P, Quest.Difficulty.NOVICE),
@@ -202,6 +207,8 @@ public enum QuestHelperQuest
 	A_KINGDOM_DIVIDED(2971, "A Kingdom Divided", QuestVarbits.QUEST_A_KINGDOM_DIVIDED, Quest.Type.P2P, Quest.Difficulty.EXPERIENCED),
 	A_NIGHT_AT_THE_THEATRE(949, "A Night at the Theatre", QuestVarbits.QUEST_A_NIGHT_AT_THE_THEATRE, Quest.Type.P2P, Quest.Difficulty.MASTER),
 
+	LAND_OF_THE_GOBLINS(4135,"Land of the Goblins", QuestVarbits.QUEST_LAND_OF_THE_GOBLINS, Quest.Type.P2P, Quest.Difficulty.EXPERIENCED),
+
 
 	//Miniquests
 	ENTER_THE_ABYSS(3140, "Enter the Abyss", QuestVarPlayer.QUEST_ENTER_THE_ABYSS, Quest.Type.MINIQUEST, Quest.Difficulty.MINIQUEST),
@@ -227,53 +234,53 @@ public enum QuestHelperQuest
 
 	// Ardougne
 	ARDOUGNE_EASY("Ardougne Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_ARDOUGNE_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	ARDOUGNE_MEDIUM("Ardougne Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_ARDOUGNE_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	ARDOUGNE_HARD("Ardougne Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_ARDOUGNE_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	ARDOUGNE_ELITE("Ardougne Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_ARDOUGNE_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Desert
 	DESERT_EASY("Desert Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_DESERT_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	DESERT_MEDIUM("Desert Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_DESERT_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	DESERT_HARD("Desert Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_DESERT_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	DESERT_ELITE("Desert Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_DESERT_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Falador
 	FALADOR_EASY("Falador Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_FALADOR_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	FALADOR_MEDIUM("Falador Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_FALADOR_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	FALADOR_HARD("Falador Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_FALADOR_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	FALADOR_ELITE("Falador Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_FALADOR_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Fremennik
 	FREMENNIK_EASY("Fremennik Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_FREMENNIK_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	FREMENNIK_MEDIUM("Fremennik Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_FREMENNIK_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	FREMENNIK_HARD("Fremennik Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_FREMENNIK_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	FREMENNIK_ELITE("Fremennik Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_FREMENNIK_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Kandarin
 	KANDARIN_EASY("Kandarin Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_KANDARIN_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	KANDARIN_MEDIUM("Kandarin Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_KANDARIN_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	KANDARIN_HARD("Kandarin Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_KANDARIN_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	KANDARIN_ELITE("Kandarin Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_KANDARIN_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Karamja
 	KARAMJA_EASY("Karamja Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_KARAMJA_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
@@ -287,63 +294,63 @@ public enum QuestHelperQuest
 
 	// Kourend & Kebos
 	KOUREND_EASY("Kourend Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_KOUREND_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	KOUREND_MEDIUM("Kourend Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_KOUREND_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	KOUREND_HARD("Kourend Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_KOUREND_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	KOUREND_ELITE("Kourend Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_KOUREND_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Lumbridge & Draynor
 	LUMBRIDGE_EASY("Lumbridge Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_LUMBRIDGE_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	LUMBRIDGE_MEDIUM("Lumbridge Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_LUMBRIDGE_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	LUMBRIDGE_HARD("Lumbridge Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_LUMBRIDGE_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	LUMBRIDGE_ELITE("Lumbridge Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_LUMBRIDGE_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Morytania
 	MORYTANIA_EASY("Morytania Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_MORYTANIA_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	MORYTANIA_MEDIUM("Morytania Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_MORYTANIA_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	MORYTANIA_HARD("Morytania Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_MORYTANIA_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	MORYTANIA_ELITE("Morytania Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_MORYTANIA_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Varrock
 	VARROCK_EASY("Varrock Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_VARROCK_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	VARROCK_MEDIUM("Varrock Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_VARROCK_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	VARROCK_HARD("Varrock Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_VARROCK_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	VARROCK_ELITE("Varrock Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_VARROCK_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Western Provinces
 	WESTERN_EASY("Western Provinces Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_WESTERN_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
 		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	WESTERN_MEDIUM("Western Provinces Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_WESTERN_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	WESTERN_HARD("Western Provinces Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_WESTERN_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	WESTERN_ELITE("Western Provinces Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_WESTERN_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 	// Wilderness
 	WILDERNESS_EASY("Wilderness Easy Diary", QuestVarbits.ACHIEVEMENT_DIARY_WILDERNESS_EASY, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	WILDERNESS_MEDIUM("Wilderness Medium Diary", QuestVarbits.ACHIEVEMENT_DIARY_WILDERNESS_MEDIUM, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	WILDERNESS_HARD("Wilderness Hard Diary", QuestVarbits.ACHIEVEMENT_DIARY_WILDERNESS_HARD, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 	WILDERNESS_ELITE("Wilderness Elite Diary", QuestVarbits.ACHIEVEMENT_DIARY_WILDERNESS_ELITE, 1, Quest.Type.ACHIEVEMENT_DIARY,
-			Quest.Difficulty.ACHIEVEMENT_DIARY),
+		Quest.Difficulty.ACHIEVEMENT_DIARY),
 
 
 	// Generic
@@ -463,7 +470,7 @@ public enum QuestHelperQuest
 			int currentState = getVar(client);
 			if (currentState == completeValue)
 			{
-				return  QuestState.FINISHED;
+				return QuestState.FINISHED;
 			}
 			if (currentState == 0)
 			{
