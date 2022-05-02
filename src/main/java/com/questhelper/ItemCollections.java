@@ -827,14 +827,24 @@ public class ItemCollections
 
 	@Getter
 	private static final List<Integer> pharoahSceptre = ImmutableList.of(
-		ItemID.PHARAOHS_SCEPTRE_1,
-		ItemID.PHARAOHS_SCEPTRE_2,
-		ItemID.PHARAOHS_SCEPTRE_3,
-		ItemID.PHARAOHS_SCEPTRE_4,
-		ItemID.PHARAOHS_SCEPTRE_5,
-		ItemID.PHARAOHS_SCEPTRE_6,
-		ItemID.PHARAOHS_SCEPTRE_7,
-		ItemID.PHARAOHS_SCEPTRE_8
+		ItemID.PHARAOHS_SCEPTRE,
+		ItemID.PHARAOHS_SCEPTRE_9045,
+		ItemID.PHARAOHS_SCEPTRE_9046,
+		ItemID.PHARAOHS_SCEPTRE_9047,
+		ItemID.PHARAOHS_SCEPTRE_9048,
+		ItemID.PHARAOHS_SCEPTRE_9049,
+		ItemID.PHARAOHS_SCEPTRE_9050,
+		ItemID.PHARAOHS_SCEPTRE_9051,
+		ItemID.PHARAOHS_SCEPTRE_13074,
+		ItemID.PHARAOHS_SCEPTRE_13075,
+		ItemID.PHARAOHS_SCEPTRE_13076,
+		ItemID.PHARAOHS_SCEPTRE_13077,
+		ItemID.PHARAOHS_SCEPTRE_13078,
+		ItemID.PHARAOHS_SCEPTRE_16176,
+		ItemID.PHARAOHS_SCEPTRE_21445,
+		ItemID.PHARAOHS_SCEPTRE_21446,
+		ItemID.PHARAOHS_SCEPTRE_UNCHARGED,
+		ItemID.PHARAOHS_SCEPTRE_26948
 	);
 
 	// Logs
@@ -1305,6 +1315,16 @@ public class ItemCollections
 		ItemID.SLAYER_GLOVES,
 		ItemID.VOID_KNIGHT_GLOVES,
 		ItemID.WHITE_GLOVES
+	);
+
+	@Getter
+	private static final List<Integer> gracefulGloves = ImmutableList.of(
+		ItemID.GRACEFUL_GLOVES, ItemID.GRACEFUL_GLOVES_11859, ItemID.GRACEFUL_GLOVES_13587,
+		ItemID.GRACEFUL_GLOVES_13588, ItemID.GRACEFUL_GLOVES_13599, ItemID.GRACEFUL_GLOVES_13600,
+		ItemID.GRACEFUL_GLOVES_13611, ItemID.GRACEFUL_GLOVES_13612, ItemID.GRACEFUL_GLOVES_13623, ItemID.GRACEFUL_GLOVES_13624,
+		ItemID.GRACEFUL_GLOVES_13635, ItemID.GRACEFUL_GLOVES_13636, ItemID.GRACEFUL_GLOVES_13675, ItemID.GRACEFUL_GLOVES_13676,
+		ItemID.GRACEFUL_GLOVES_21073, ItemID.GRACEFUL_GLOVES_21075, ItemID.GRACEFUL_GLOVES_24755, ItemID.GRACEFUL_GLOVES_24757,
+		ItemID.GRACEFUL_GLOVES_25081, ItemID.GRACEFUL_GLOVES_25083
 	);
 
 	@Getter
@@ -2056,9 +2076,9 @@ public class ItemCollections
 	private static final List<Integer> fishingRod = ImmutableList.of(
 		ItemID.PEARL_FISHING_ROD,
 		ItemID.FISHING_ROD
-  );
+	);
 
-  @Getter
+	@Getter
 	private static final List<Integer> OgreBrutalArrows = ImmutableList.of(
 		ItemID.RUNE_BRUTAL,
 		ItemID.ADAMANT_BRUTAL,
@@ -2185,10 +2205,10 @@ public class ItemCollections
 	private static final List<Integer> voidRobe = ImmutableList.of(
 		ItemID.ELITE_VOID_ROBE,
 		ItemID.VOID_KNIGHT_ROBE
-  );
-	
-  @Getter
-  private static final List<Integer> guthixBalanceUnf = ImmutableList.of(
+	);
+
+	@Getter
+	private static final List<Integer> guthixBalanceUnf = ImmutableList.of(
 		ItemID.GUTHIX_BALANCE_UNF,
 		ItemID.GUTHIX_BALANCE_UNF_7654,
 		ItemID.GUTHIX_BALANCE_UNF_7656,

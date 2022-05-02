@@ -30,6 +30,7 @@ import com.questhelper.Zone;
 import com.questhelper.banktab.BankSlotIcons;
 import com.questhelper.requirements.Requirement;
 import com.questhelper.requirements.quest.QuestRequirement;
+import com.questhelper.requirements.util.Operation;
 import com.questhelper.requirements.var.VarbitRequirement;
 import com.questhelper.requirements.ZoneRequirement;
 import com.questhelper.rewards.ExperienceReward;
@@ -68,7 +69,7 @@ public class Contact extends BasicQuestHelper
 	Requirement inBank, inDungeon, inChasm, hasReadParchment, kerisNearby;
 
 	QuestStep talkToHighPriest, talkToJex, goDownToBank, goDownToDungeon, goDownToChasm, searchKaleef, readParchment, talkToMaisa, talkToOsman, talkToOsmanOutsideSoph, goDownToBankAgain, goDownToDungeonAgain, goDownToChasmAgain,
-		killGiantScarab, pickUpKeris, returnToHighPriest;
+		killGiantScarab, pickUpKeris, talkToOsmanChasm, returnToHighPriest;
 
 	//Zones
 	Zone bank, dungeon, chasm;
@@ -111,10 +112,17 @@ public class Contact extends BasicQuestHelper
 		steps.put(90, scarabBattle);
 		steps.put(100, scarabBattle);
 
+		ConditionalStep talkToOsmanInCrevice = new ConditionalStep(this, goDownToBankAgain);
+		talkToOsmanInCrevice.addStep(kerisNearby, pickUpKeris);
+		talkToOsmanInCrevice.addStep(inChasm, talkToOsmanChasm);
+		talkToOsmanInCrevice.addStep(inDungeon, goDownToChasmAgain);
+		talkToOsmanInCrevice.addStep(inBank, goDownToDungeonAgain);
+
+		steps.put(110, talkToOsmanInCrevice);
+
 		ConditionalStep finishOff = new ConditionalStep(this, returnToHighPriest);
 		finishOff.addStep(kerisNearby, pickUpKeris);
 
-		steps.put(110, finishOff);
 		steps.put(120, finishOff);
 
 		return steps;
@@ -144,7 +152,7 @@ public class Contact extends BasicQuestHelper
 	public void setupZones()
 	{
 		bank = new Zone(new WorldPoint(2772, 5129, 0), new WorldPoint(2758, 5145, 0));
-		dungeon = new Zone(new WorldPoint(3263, 9200, 2), new WorldPoint(3327, 9280, 2));
+		dungeon = new Zone(8516);
 		chasm = new Zone(new WorldPoint(3216, 9217, 0), new WorldPoint(3265, 9277, 0));
 	}
 
@@ -152,8 +160,8 @@ public class Contact extends BasicQuestHelper
 	{
 		inBank = new ZoneRequirement(bank);
 		inDungeon = new ZoneRequirement(dungeon);
-		inChasm = new ZoneRequirement(chasm);
-		hasReadParchment = new VarbitRequirement(3274, 50);
+		inChasm = new ZoneRequirement(chasm, new Zone(9027));
+		hasReadParchment = new VarbitRequirement(3274, 50, Operation.GREATER_EQUAL);
 		kerisNearby = new ItemOnTileRequirement(keris);
 	}
 
@@ -166,75 +174,76 @@ public class Contact extends BasicQuestHelper
 
 		goDownToBank = new ObjectStep(this, ObjectID.LADDER_20275, new WorldPoint(3315, 2797, 0), "Go down the ladder east of Jex.", lightSource);
 		goDownToDungeon = new ObjectStep(this, ObjectID.TRAPDOOR_20340, new WorldPoint(2766, 5130, 0), "Go down the trapdoor.", lightSource);
-		goDownToChasm = new ObjectStep(this, ObjectID.LADDER_20287, new WorldPoint(3268, 9229, 2),
+		goDownToChasm = new ObjectStep(this, ObjectID.LADDER_20287, new WorldPoint(2116, 4365, 2),
 			"Be careful of traps, and follow the path to the south west ladder. Disarm traps where the path breaks, " +
 				"and use protection prayers against the monsters.");
 
 		List<WorldPoint> path = Arrays.asList(
-			new WorldPoint(3318, 9271, 2),
-			new WorldPoint(3318, 9265, 2),
-			new WorldPoint(3314, 9265, 2),
-			new WorldPoint(3314, 9272, 2),
-			new WorldPoint(3306, 9272, 2),
-			new WorldPoint(3306, 9274, 2),
-			new WorldPoint(3296, 9274, 2),
-			new WorldPoint(3296, 9268, 2),
-			new WorldPoint(3299, 9268, 2),
+			new WorldPoint(2166, 4409, 2),
+			new WorldPoint(2166, 4401, 2),
+			new WorldPoint(2161, 4401, 2),
+			new WorldPoint(2161, 4408, 2),
+			new WorldPoint(2154, 4408, 2),
+			new WorldPoint(2154, 4410, 2),
+			new WorldPoint(2144, 4410, 2),
+			new WorldPoint(2144, 4404, 2),
+			new WorldPoint(2147, 4404, 2),
 			new WorldPoint(0, 0, 0),
-			new WorldPoint(3302, 9268, 2),
-			new WorldPoint(3304, 9264, 2),
-			new WorldPoint(3304, 9264, 2),
-			new WorldPoint(3307, 9264, 2),
-			new WorldPoint(3307, 9260, 2),
-			new WorldPoint(3310, 9260, 2),
-			new WorldPoint(3311, 9259, 2),
-			new WorldPoint(3312, 9259, 2),
-			new WorldPoint(3313, 9260, 2),
-			new WorldPoint(3314, 9260, 2),
-			new WorldPoint(3315, 9259, 2),
-			new WorldPoint(3316, 9259, 2),
-			new WorldPoint(3317, 9260, 2),
-			new WorldPoint(3321, 9260, 2),
-			new WorldPoint(3321, 9254, 2),
+			new WorldPoint(2150, 4404, 2),
+			new WorldPoint(2152, 4404, 2),
+			new WorldPoint(2152, 4400, 2),
+			new WorldPoint(2156, 4400, 2),
+			new WorldPoint(2156, 4396, 2),
+			new WorldPoint(2158, 4396, 2),
+			new WorldPoint(2159, 4395, 2),
+			new WorldPoint(2160, 4395, 2),
+			new WorldPoint(2161, 4396, 2),
+			new WorldPoint(2162, 4396, 2),
+			new WorldPoint(2163, 4395, 2),
+			new WorldPoint(2164, 4395, 2),
+			new WorldPoint(2165, 4396, 2),
+			new WorldPoint(2169, 4396, 2),
+			new WorldPoint(2169, 4390, 2),
 
-			new WorldPoint(3321, 9254, 3),
+			new WorldPoint(0, 0, 0),
 
-			new WorldPoint(3321, 9251, 2),
-			new WorldPoint(3321, 9246, 2),
-			new WorldPoint(3312, 9246, 2),
-			new WorldPoint(3312, 9252, 2),
-			new WorldPoint(3305, 9252, 2),
-			new WorldPoint(3305, 9255, 2),
-			new WorldPoint(3297, 9255, 2),
-			new WorldPoint(3297, 9251, 2),
-			new WorldPoint(3301, 9251, 2),
-			new WorldPoint(3301, 9238, 2),
-			new WorldPoint(3304, 9238, 2),
+			new WorldPoint(2169, 4387, 2),
+			new WorldPoint(2169, 4382, 2),
+			new WorldPoint(2160, 4382, 2),
+			new WorldPoint(2160, 4388, 2),
+			new WorldPoint(2153, 4388, 2),
+			new WorldPoint(2153, 4391, 2),
+			new WorldPoint(2145, 4391, 2),
+			new WorldPoint(2145, 4387, 2),
+			new WorldPoint(2149, 4387, 2),
+			new WorldPoint(2149, 4374, 2),
+			new WorldPoint(2151, 4374, 2),
 
 			new WorldPoint(3304, 9238, 3),
 
-			new WorldPoint(3307, 9238, 2),
-			new WorldPoint(3309, 9238, 2),
-			new WorldPoint(3309, 9233, 2),
-			new WorldPoint(3297, 9233, 2),
-			new WorldPoint(3297, 9229, 2),
-			new WorldPoint(3296, 9228, 2),
-			new WorldPoint(3296, 9225, 2),
-			new WorldPoint(3283, 9225, 2),
-			new WorldPoint(3283, 9227, 2),
-			new WorldPoint(3279, 9227, 2),
-			new WorldPoint(3279, 9226, 2),
-			new WorldPoint(3276, 9226, 2),
-			new WorldPoint(3276, 9229, 2),
-			new WorldPoint(3269, 9229, 2)
+			new WorldPoint(2154, 4374, 2),
+			new WorldPoint(2157, 4374, 2),
+			new WorldPoint(2157, 4369, 2),
+			new WorldPoint(2145, 4369, 2),
+			new WorldPoint(2145, 4365, 2),
+			new WorldPoint(2144, 4364, 2),
+			new WorldPoint(2144, 4361, 2),
+			new WorldPoint(2132, 4361, 2),
+			new WorldPoint(2132, 4363, 2),
+			new WorldPoint(2127, 4363, 2),
+			new WorldPoint(2127, 4362, 2),
+			new WorldPoint(2124, 4362, 2),
+			new WorldPoint(2124, 4364, 2),
+			new WorldPoint(2116, 4364, 2)
 		);
 
 		((DetailedQuestStep) goDownToChasm).setLinePoints(path);
 
-		searchKaleef = new ObjectStep(this, ObjectID.KALEEFS_BODY, new WorldPoint(3239, 9244, 0), "Follow the path along, and search Kaleef's corpse there.");
+		searchKaleef = new ObjectStep(this, NullObjectID.NULL_44597, new WorldPoint(3239, 9244, 0),
+			"Follow the path along, and search Kaleef's corpse there.");
 
 		readParchment = new DetailedQuestStep(this, "Read the parchment", parchment);
-		talkToMaisa = new NpcStep(this, NpcID.MAISA, new WorldPoint(3218, 9246, 0), "Talk to Maisa on the west side of the chasm.");
+		talkToMaisa = new NpcStep(this, NpcID.MAISA, new WorldPoint(2258, 4317, 0), "Talk to Maisa on the west side of the chasm.");
 		talkToMaisa.addDialogStep("Draynor Village");
 		talkToMaisa.addDialogStep("Leela.");
 
@@ -246,13 +255,15 @@ public class Contact extends BasicQuestHelper
 
 		goDownToBankAgain = new ObjectStep(this, ObjectID.LADDER_20275, new WorldPoint(3315, 2797, 0), "Prepare to fight a level 191 Giant Scarab. Go down the ladder east of Jex.", lightSource, combatGear);
 		goDownToDungeonAgain = new ObjectStep(this, ObjectID.TRAPDOOR_20340, new WorldPoint(2766, 5130, 0), "Go down the trapdoor.", lightSource);
-		goDownToChasmAgain = new ObjectStep(this, ObjectID.LADDER_20287, new WorldPoint(3268, 9229, 2), "Be careful of traps, and make your way to the south west corner of the dungeon, and go down the ladder there.");
+		goDownToChasmAgain = new ObjectStep(this, ObjectID.LADDER_20287, new WorldPoint(2116, 4365, 2), "Be careful of traps, and make your way to the south west corner of the dungeon, and go down the ladder there.");
 		((DetailedQuestStep) goDownToChasmAgain).setLinePoints(path);
 
-		killGiantScarab = new NpcStep(this, NpcID.GIANT_SCARAB, new WorldPoint(3231, 9251, 0),
+		killGiantScarab = new NpcStep(this, NpcID.GIANT_SCARAB, new WorldPoint(2272, 4323, 0),
 			"Kill the Giant Scarab near the chasm. It can extinguish your light source and poison you, so be careful.");
 
 		pickUpKeris = new ItemStep(this, "Pick up the Keris.", keris);
+
+		talkToOsmanChasm = new NpcStep(this, NpcID.OSMAN_4286, new WorldPoint(2272, 4323, 0), "Talk to Osman in the chasm.");
 
 		returnToHighPriest = new NpcStep(this, NpcID.HIGH_PRIEST_4206, new WorldPoint(3281, 2772, 0), "Report back to the High Priest in Sophanem.");
 	}
@@ -327,7 +338,7 @@ public class Contact extends BasicQuestHelper
 
 		allSteps.add(new PanelDetails("Help Osman",
 			Arrays.asList(talkToOsmanOutsideSoph, goDownToBankAgain, goDownToDungeonAgain,
-				goDownToChasmAgain, killGiantScarab, returnToHighPriest), combatGear, food, prayerPotions,
+				goDownToChasmAgain, killGiantScarab, talkToOsmanChasm, returnToHighPriest), combatGear, food, prayerPotions,
 			lightSource, tinderbox));
 
 		return allSteps;
